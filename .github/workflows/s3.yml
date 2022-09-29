@@ -10,7 +10,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_FOR_GITHUB }}
+          role-to-assume: arn:aws:iam::669840494653:role/GALE-DevOps
           aws-region: us-west-2
           role-session-name: GitHubActions
       - name: Copy files to the test website with the AWS CLI
