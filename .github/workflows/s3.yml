@@ -16,7 +16,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::669840494653:role/rw_ttd-temp_githubactions
           aws-region: us-west-2
-          role-session-name: GitHubActions
+          # role-session-name: GitHubActions
       - name: Copy files to the test website with the AWS CLI
         run: |
           aws s3 ls
@@ -26,4 +26,4 @@ jobs:
           aws_bucket: ${{ secrets.AWS_BUCKET }}
           source_dir: '.'
           destination_dir: 'kjv8qkRk-'
-          run: aws sts get-caller-identity --profile GitHubActions
+          # run: aws sts get-caller-identity --profile GitHubActions
